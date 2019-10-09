@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo List</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class='background'>
+<div class='container_main'>
+    <header>
+        <div class='header_box header_box' id='headerBox'>
+            <div class='header_box_text'>
+                <h1 class='header_text'>ToDo App</h1>
+            </div>
+            <div class='header_box_add' id="showForm">
+                <p class='header_text_add'>Add task</p>
+            </div>
+            <div id="header_angles" class='header_box_angles'>
+                <i class="angle-right" ></i>
+                <p class='header_text'>Innocamp</p>
+                <i class="angle-left" ></i>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <form id='formTable' class='form'>
+            <div class="form_form_box form_form_box_txt">
+                <label class='form_label' for="title"> Enter title</label>
+                <input class='form_input' type="text" placeholder="Max length 25 characters" name='title' id="title" maxlength="25">
+            </div>
+
+            <div class="form_form_box_desc form_form-box_txt">
+                <label class='form_label form_label_textarea' for="description"> Enter description</label>
+                <textarea class='form_input textarea' type="text" placeholder="Max length 100 characters" name='description' id="description" maxlength="100"></textarea>
+            </div>
+            <div class="form_form_box form_form_box_txt">
+                <label class='form_label' for="deadline"> Enter deadline</label>
+                <input class='form_input' type="date" placeholder="Enter deadline" name='deadline' id="deadline">
+            </div>
+
+            <div class="form_form_box form_select_box">
+                <label class='form_select_box_label' for="priority"> Choose priority</label>
+                <select class='form_select_box_select' name='priority' id="priority">
+                    <option value='Please select priority' selected disabled>Select</option>
+                    <option value='Low'>Low</option>
+                    <option value='Middle'>Middle</option>
+                    <option value='High'>High</option>
+
+                </select>
+            </div>
+
+            <div class="form_btn_box">
+                <button class="form_btn" id='add'>
+                    <i class="add_icon" aria-hidden="true" id='addIcon'></i>
+                </button>
+            </div>
+        </form>
+    </section>
+    <section>
+        <div class="container_search container_search" id="container_search">
+
+            <div class='search_box'>
+                <label class='search'><i class="search_box" aria-hidden="true"></i></label>
+                <input type="text" class='search_box_input' id='searchData' placeholder="Search by title">
+            </div>
+
+            <div id='sortPriority' class='sort'> Priority sort
+            </div>
+            <div id='sortDeadline' class='sort'> Deadline sort
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <ul class='todo' id='todo'></ul>
+
+            <ul class='todo' id='completed'></ul>
+
+        </div>
+    </section>
+</div>
+<script src="js/script.js"></script>
+</body>
+
+</html>
